@@ -10,3 +10,29 @@ unit change in altitude. We define the following terms:
 
 Given the sequence of up and down steps during a hike, find and print the number of valleys walked through. 
 """
+
+def countingValleys(steps, path):
+    heightAboveSeaLevel = 0
+    valleys=0
+    for step in path:
+        if step == "D":
+            if  heightAboveSeaLevel == 0:
+                valleys+=1 
+            heightAboveSeaLevel-=1
+            #print("down")
+
+        elif step == "U":
+            #print("up")
+            heightAboveSeaLevel+=1
+        else:
+            continue
+    #print()
+    #print(heightAboveSeaLevel)
+    
+    return valleys
+
+
+paths = ["UDDDUDUU","UDDDUDUU", "DDUUDDUDUUUD"]
+for path in paths:
+    print(end = "\n")
+    countingValleys(8, path)
