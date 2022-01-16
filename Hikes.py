@@ -19,20 +19,15 @@ def countingValleys(steps, path):
             if  heightAboveSeaLevel == 0:
                 valleys+=1 
             heightAboveSeaLevel-=1
-            #print("down")
 
         elif step == "U":
-            #print("up")
             heightAboveSeaLevel+=1
         else:
             continue
-    #print()
-    #print(heightAboveSeaLevel)
-    
     return valleys
 
 
 paths = ["UDDDUDUU","UDDDUDUU", "DDUUDDUDUUUD"]
-for path in paths:
-    print(end = "\n")
-    countingValleys(8, path)
+for path in paths:   
+    V = countingValleys(8, path)
+    print(f"Valleys traversed for route {path} are = {V}")
