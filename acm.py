@@ -1,4 +1,9 @@
 """
+    Author: Francis
+    Date: 01/16/2022
+"""
+
+"""
 This is based on a tic-tac-toe game also known as the XO game played on a board
 Given an n by n matrix, with 3 a possibility of any of the 3 values ['X','O', '.']
     "X": Represents the moves made by player X

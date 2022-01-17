@@ -1,4 +1,9 @@
 """
+    Author: Francis
+    Date: 01/16/2022
+"""
+
+"""
 Given an n by m matrix with each index having an alhpabetical character.
 Also given a word, find how many occurances of the word exist in the matrix
 either by row combinations, column combinations or diagonal combinations.
