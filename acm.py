@@ -4,14 +4,14 @@
 """
 
 """
-This is based on a tic-tac-toe game also known as the XO game played on a board
+This task is based on a tic-tac-toe game also known as the XO game played on a board
 Given an n by n matrix, with 3 a possibility of any of the 3 values ['X','O', '.']
     "X": Represents the moves made by player X
     "O": Represents the moves made by player O
     ".": Represents possibilities of spaces where moves are yet to be made
 
 A solution should be implemented to predict the current state of the game
-There are 4 possibilities ["X WIN","O WIN", "TIE","ONGOING"]
+There are 4 possibilities (return either) ["X WIN","O WIN", "TIE","ONGOING"]
     "X WIN"   : When player X has won the game.
     "O WIN"   : When player O has won the game.
     "TIE"     : When both players can not win but the game is fully played.
@@ -29,7 +29,11 @@ Example:
         Consider board with matrix [['X','O'],['O','.']], here the player O has won the game
         because one diagonal has "OO".
 
-    . 
+Test: board = [['X', '.', '.', 'O'], ['.', 'X', 'O', '.'], ['.', 'O', 'X', '.'], ['O', 'X', 'X', 'O']]
+      board = [['O','X'], ['X','.']]
+      board = [['X','O','X'], ['O','X','O'],['O','X','O']]
+      board = [['X','.','X'], ['O','X','O'],['O','X','O']]
+
 """
 def Solution(board):
     cols = len(board)

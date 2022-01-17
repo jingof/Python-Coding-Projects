@@ -20,7 +20,12 @@ Example:
     Given a matrix m= [['a','a'],['a','a']], and a word='aa', your code should return 5 occurances
     ie all rows and all columns and the diagonal.
 
-    NOTE: There can be more than 1 occurance of the word in the formed string.
+NOTE: There can be more than 1 occurance of the word in the formed string.
+
+TEST: board = [['s', 'o', 's', 'o'], ['s', 'o', 'o', 's'], ['s', 's', 's', 's']]    word = "sos"
+      board2 = [['a','a'],['a','a']]    word = "aa"
+      board3 = [['z','z','z'],['z','z','z'],['z','z','z']]  word = "zz"
+
 """
 
 def solution(board,word):

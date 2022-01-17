@@ -20,7 +20,7 @@ The list must be sorted in ascending order of the package name and the version. 
  ["express-10.1", "express-2.0"] in the list. The sorted list should be ["express-2.0", "express-10.1"].
 
 Example:
-    Given instructions below.
+    Given operations below.
     [ ["add", "express", "1.1"], 
       ["add", "async", "1.0"], 
       ["add", "express", "10.0"], 
@@ -36,6 +36,8 @@ Example:
       6. The "express" package is downloaded and installed, in total there are 3 packages installed.
     
     The result of the above should be ["async-1.0","express-2.2","express-10.0"]
+
+TEST: Use the above example.
 """
 
 class Packages:
