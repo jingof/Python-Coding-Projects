@@ -12,56 +12,42 @@ Example
 $s = [[5, 3, 4], [1, 5, 8], [6, 4, 2]]  can be converted to [[8, 3, 4], [1, 5, 9], [6, 7, 2]]
 at a cost of |5-8|+|8-9|+|4-7| = 7
 """
-
-s = [[5, 3, 4], [1, 5, 8], [6, 4, 2]] 
-s2 = [[4, 5, 8], [2, 4, 1], [1, 9, 7]]
-
- 
-def magicSquare(m):
-    
+def magicSquare1(s):
+    magic_squares = [[8,1,6,3,5,7,4,9,2],
+                     [8,3,4,1,5,9,6,7,2],
+                     [4,9,2,3,5,7,8,1,6],
+                     [4,3,8,9,5,1,2,7,6],
+                     [6,7,2,1,5,9,8,3,4],
+                     [6,1,8,7,5,3,2,9,4],
+                     [2,9,4,7,5,3,6,1,8],
+                     [2,7,6,9,5,1,4,3,8]]
     cost = 0
-    if m[1][1] != 5:
-        cost += abs(m[1][1] - 5)
-        m[1][1] = 5
+    s2 = []
+    for i in s:
+        for j in i:
+            s2.append(j)
+    min_score = 100000
+    for s3 in magic_squares:
+        cost = 0
+        for i in range(len(s2)):
+            cost += abs(s2[i] - s3[i])
+        if min_score > cost:
 
-    #mid Row correction
-    midRow = m[1]
-    both  = 0
-
-    if midRow[0] in [1,9] and midRow[2] in [3,7]:
-        both = 2
-    elif midRow[2] in [1,9] and midRow[0] in [3,7]:
-        both = 2
-    elif midRow[2] in [1,9] or midRow[0] in [1,9]:
-        both = 1
-    elif  midRow[0] in [3,7] or midRow[2] in [3,7]:
-        both = 0
-    else:
-        both = 3
+            min_score = cost
+  
+    return min_score
     
-    if both == 1:
-        #print('1 , 9')
-        val = [x for x in [1,5,9] if x not in midRow]
-        if len(val) > 0:
-            val = val[0]
-            wrongVal = [x for x in midRow if x not in [1,5,9]][0]
-            wrongInd = midRow.index(wrongVal)
-            midRow[wrongInd] = val
-            cost += (wrongVal-val)
-    elif both == 0:
-        #print('1 , 9')
-        val = [x for x in [3,5,7] if x not in midRow]
-        if len(val) > 0:
-            val = val[0]
-            wrongVal = [x for x in midRow if x not in [3,5,7]][0]
-            wrongInd = midRow.index(wrongVal)
-            midRow[wrongInd] = val
-            cost += abs(wrongVal-val)
-    print(midRow)
-        
-        
+s2 = [[7, 5, 5], [7, 4, 1], [1, 9, 3]]
+print(magicSquare1(s2))
+s = [[5, 3, 4], [1, 5, 8], [6, 4, 2]] 
+print(magicSquare1(s))
 
+s3 =[[4, 9, 2], [3, 5, 7], [8, 1, 5]]
+print(magicSquare1(s3))
 
-    
+s4 =[[4, 8, 2], [4, 5, 7], [6, 1, 6]]
+print(magicSquare1(s4))
 
-print(magicSquare(s2))
+s5 = [[2, 9, 8], [4, 2, 7], [5, 6, 7]]     
+print(magicSquare1(s5))
+

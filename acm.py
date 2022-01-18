@@ -42,6 +42,7 @@ def Solution(board):
     for i in range(cols):
         lista2.append(list(board[i]))
     
+    # traverse rows
     for i in range(rows):
         row = lista2[i]
         phrase = ""
