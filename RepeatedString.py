@@ -24,27 +24,35 @@ Returns
 
 
 
+from audioop import mul
+
+
 def Solution(s,n):
     if s == "a":
         return n
-    
     indA = []
-    for letter in s:
+    for i in range(len(s)):
+        letter = s[i]
         if letter == 'a':
-            indA = 
+            indA.append(i)
     lenS = len(s)
-    newS = s
-    ind = 0
-    while len(newS) < n:
-        newS+=s[ind]
-        ind +=1
-        if ind == len(s):
-            ind = 0
-    #print(newS, s, n)
-    print(len(newS))
-    #print(s,n)
+    multiple = int(n/lenS)
+    remainder = n%lenS
+    occurances = multiple * len(indA)
+    for ind in indA:
+        if ind < remainder:
+            occurances+=1
+    return occurances
+
+
+
+   
+   
 
 
 s = "a"
 n = 10000000
+
+s= "abcac"
+n = 5
 print(Solution(s,n))
