@@ -1,7 +1,7 @@
 from github import Github
 import pandas as pd
 
-ACCESS_TOKEN  = "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"
+ACCESS_TOKEN  = "(YOUR GIT HUB ACCESS TOKEN GOES HERE)!!!!!"
 # creating a github object
 g = Github(ACCESS_TOKEN)
 

@@ -25,10 +25,26 @@ Returns
 
 
 def Solution(s,n):
+    if s == "a":
+        return n
+    
+    indA = []
+    for letter in s:
+        if letter == 'a':
+            indA = 
+    lenS = len(s)
     newS = s
-    print(s,n)
+    ind = 0
+    while len(newS) < n:
+        newS+=s[ind]
+        ind +=1
+        if ind == len(s):
+            ind = 0
+    #print(newS, s, n)
+    print(len(newS))
+    #print(s,n)
 
 
-s = "abcac"
-n = 10
-Solution(s,n)
+s = "a"
+n = 10000000
+print(Solution(s,n))
