@@ -1,3 +1,8 @@
 trial.py
 .vscode
 redBlack*
+binarySearch*
+trial*
+*.cpp
+*.h
+recursion*
