@@ -1,5 +1,5 @@
 """
-A computer can process code files in a file. If the file has code lines that are divisible by the number of cores,
+A computer can processes code files in a file. If the file has code lines that are divisible by the number of cores,
 The computer can split the code lines among the cores.
 Example if the file has 5, 10, 20 code lines, these can all be  processed by a computer that 
 has 5 cores since they are all divisible by 5. The number of files that can be 
