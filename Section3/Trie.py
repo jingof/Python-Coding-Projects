@@ -36,7 +36,6 @@ class Trie:
     def __init__(self):
         """
         initialises the root the scores array
-
         """
         self.root = Node('\0')
         self.scores = [0] * 26
@@ -60,7 +59,6 @@ class Trie:
     def insertWord(self,word):
         """
         Adds a word to the trie structure
-
         """
         i=0
         currNode = self.root
@@ -142,7 +140,6 @@ while True:
     s = line[3:].replace("\n", "")  
     if c.isalpha():
         trie.addScore(c,s)
-
 
 dictionaryFile = open(f"{path}/dictionary.txt")
 while True:
